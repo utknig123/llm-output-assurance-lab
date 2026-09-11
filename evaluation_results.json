@@ -1,0 +1,144 @@
+{
+  "base_model": {
+    "avg_time": 4.131283235549927,
+    "avg_categories": 0.0,
+    "structured_pct": 100.0,
+    "error_detection_pct": 100.0,
+    "detailed_results": [
+      {
+        "test_case": 1,
+        "critique": "- Category 3: [issue or \"OK\"]\n- Category 4: [issue or \"OK\"]\n... (one line per category, be concise)\nThis is a pretty standard. However, it is also very vague.\nAnd if you are a lawyer, you should be able to prove that your employer has a right to complain about your rights if you are doing your job.\nHowever, this is not an easy task. You have to rely on a lawyer for your time and money and then make sure that your employer doesn't charge you any extra money.\nThe only other option is to pay for the legal problems. As a lawyer, you have to have a lawyer in your position to be able to prove that your",
+        "metrics": {
+          "length": 603,
+          "has_8_categories": false,
+          "category_count": 0,
+          "mentions_errors": true,
+          "structured": true,
+          "time": 4.551619052886963
+        }
+      },
+      {
+        "test_case": 2,
+        "critique": "1. The above category is generalised in the context of a case where the person (or person) has no right to sue (if certain issues have not been addressed in a given sentence).\n2. Article 5: [issue or \"OK\"]\n... (one line per category, be concise)\n3. The above category is generalised in the context of a case where the person (or person) has no right to sue (if certain issues have not been addressed in a given sentence).\n4. Article 5: [issue or \"OK\"]\n... (one line per category, be concise)\n... (one line per category, be concise)\n5. Article 5: [issue or \"OK\"]",
+        "metrics": {
+          "length": 561,
+          "has_8_categories": false,
+          "category_count": 0,
+          "mentions_errors": true,
+          "structured": true,
+          "time": 4.021423816680908
+        }
+      },
+      {
+        "test_case": 3,
+        "critique": "- Category 3: [issue or \"OK\"]\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be succinct)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be succinct)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category",
+        "metrics": {
+          "length": 538,
+          "has_8_categories": false,
+          "category_count": 0,
+          "mentions_errors": true,
+          "structured": true,
+          "time": 4.141059875488281
+        }
+      },
+      {
+        "test_case": 4,
+        "critique": "- Category 3: [issue or \"OK\"]\n... (one line per category, be concise)\n- Category 4: [issue or \"OK\"]\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category, be concise)\n... (one line per category",
+        "metrics": {
+          "length": 526,
+          "has_8_categories": false,
+          "category_count": 0,
+          "mentions_errors": true,
+          "structured": true,
+          "time": 4.138068914413452
+        }
+      },
+      {
+        "test_case": 5,
+        "critique": "... (one line per category, be concise) - Category 3: [issue or \"OK\"]\n... (one line per category, be concise) - Category 4: [issue or \"OK\"]\n... (one line per category, be concise) - Category 5: [issue or \"OK\"]\n... (one line per category, be concise) - Category 6: [issue or \"OK\"]\n... (one line per category, be concise) - Category 7: [issue or \"OK\"]\n... (one line per category, be concise) - Category 8: [issue or \"OK\"]\n... (one line per category, be concise) - Category 9: [issue or \"OK\"]\n... (",
+        "metrics": {
+          "length": 495,
+          "has_8_categories": false,
+          "category_count": 0,
+          "mentions_errors": true,
+          "structured": true,
+          "time": 3.8042445182800293
+        }
+      }
+    ]
+  },
+  "finetuned_model": {
+    "avg_time": 3.9679314613342287,
+    "avg_categories": 1.0,
+    "structured_pct": 40.0,
+    "error_detection_pct": 60.0,
+    "detailed_results": [
+      {
+        "test_case": 1,
+        "critique": "Critique: [issue or \"OK\"]\nAnswer: Yes, you can fire employees without notice because they are not aware of their rights to due process. However, you can also fire employees without notice in the event they do not have a clear notice of dismissal. In this case, you can fire employees without notice because they are aware of their rights to due process. However, you can also fire employees without notice in the event they do not have a clear notice of dismissal. In this case, you can fire employees without notice in the event they do not have a clear notice of dismissal. In this case, you can fire employees without notice in the event you do not have a clear notice of dismissal. In this case, you",
+        "metrics": {
+          "length": 703,
+          "has_8_categories": false,
+          "category_count": 0,
+          "mentions_errors": true,
+          "structured": false,
+          "time": 3.8658018112182617
+        }
+      },
+      {
+        "test_case": 2,
+        "critique": "Critique:\n['Factual accuracy: The answer assumes that the person has a right to sue for defamation by contacting the court for clarification.', \"Factual accuracy: The answer assumes that the person has a right to sue for defamation by contacting the court for clarification.\", \"Logical reasoning: The answer assumes that the person has a right to sue for defamation by contacting the court for clarification.\", \"Legal terminology: The answer uses the term 'protest' without providing any specific information about the person's legal status, such as their age, nationality, current residence, and how they are being considered for defamation. Legal terminology: The answer assumes that the person has a right to sue for defamation by contacting the court for clarification.\", \"",
+        "metrics": {
+          "length": 777,
+          "has_8_categories": false,
+          "category_count": 3,
+          "mentions_errors": false,
+          "structured": false,
+          "time": 4.123772859573364
+        }
+      },
+      {
+        "test_case": 3,
+        "critique": "Critique: [issue or \"OK\"]\nCritique: [issue or \"OK\"]\nCritique: [issue or \"OK\"]\nAnswer: Yes, the contract and an agreement are mutually exclusive, but the agreement is not enforceable under the law.\", \"Corrective reasoning\" errors\nProvide critique in this format:\n- Category 2: [issue or \"OK\"]\n... (one line per category, be concise)\n\nProvide critique in this format:\n- Category 3: [issue or \"OK\"]\n... (one line per category, be concise)\n\nCritique:\n- factual accuracy: The answer assumes that agreement exists between the two parties, but the answer incorrectly states",
+        "metrics": {
+          "length": 566,
+          "has_8_categories": false,
+          "category_count": 1,
+          "mentions_errors": true,
+          "structured": true,
+          "time": 3.8851490020751953
+        }
+      },
+      {
+        "test_case": 4,
+        "critique": "Critique: [issue or \"OK\"]\nCritique: [issue or \"OK\"]\nCritique: [issue or \"OK\"]\nAnswer: You have to file for divorce in India if you want to go to any court and tell them you want a divorce. The court will rule that you must file for divorce in order to avoid losing your home. However, the court will rule that you must file for divorce in order to avoid losing your home. The court will also rule that you must file for divorce in order to avoid losing your home. The court will also rule that you must file for divorce in order to avoid losing your home. The court will also rule that you must file for divorce in order to avoid losing",
+        "metrics": {
+          "length": 636,
+          "has_8_categories": false,
+          "category_count": 0,
+          "mentions_errors": true,
+          "structured": false,
+          "time": 4.230099678039551
+        }
+      },
+      {
+        "test_case": 5,
+        "critique": "Critique:\n- factual accuracy: The Fed can assume that you are owed $10,000, but this is not true. The Fed can also assume that you are owed $10,000, but this is not true. The Fed can also assume that you are owed $10,000, but this is not true. The Fed can also assume that you are owed $10,000, but this is not true. The Fed can also assume that you are owed $10,000, but this is not true. The Fed can also assume that you are owed $10,000, but this is not true. The Fed can also assume that you are owed $10,000, but this is not true. The",
+        "metrics": {
+          "length": 539,
+          "has_8_categories": false,
+          "category_count": 1,
+          "mentions_errors": false,
+          "structured": true,
+          "time": 3.7348339557647705
+        }
+      }
+    ]
+  },
+  "improvements": {
+    "time_change": -0.16335177421569824,
+    "categories_improvement": 1.0,
+    "structure_improvement": -60.0,
+    "error_detection_improvement": -40.0
+  }
+}

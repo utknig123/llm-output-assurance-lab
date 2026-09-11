@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LLM Output Assurance Lab: deterministic validation and evidence-based model promotion."
+    />
+    <title>LLM Output Assurance Lab</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" class="brand">
+        <span class="brand-mark">A</span>
+        <span><strong>Assurance Lab</strong><small>AI quality engineering</small></span>
+      </a>
+      <nav>
+        <button class="active" data-view="overview">Overview</button>
+        <button data-view="assure">Output assurance</button>
+        <button data-view="critique">Structured critique</button>
+        <button data-view="promotion">Model promotion</button>
+        <button data-view="audit">Audit trail</button>
+      </nav>
+      <div class="health"><span id="health-dot"></span><span id="health-text">Checking</span></div>
+    </header>
+
+    <main>
+      <section class="view active" id="view-overview">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">AI-NATIVE ENGINEERING · VERIFICATION BEFORE TRUST</p>
+            <h1>Ship AI-assisted work with evidence, guardrails, and measurable gates.</h1>
+            <p class="lede">
+              A production-oriented control plane that interrogates generated
+              outputs instead of accepting them at face value. It validates
+              grounding, security, privacy, code risk, business fitness, and
+              approval requirements—and blocks model regressions before release.
+            </p>
+            <div class="actions">
+              <button class="primary" data-go="assure">Validate an output</button>
+              <button class="secondary" data-go="promotion">Run promotion gate</button>
+            </div>
+          </div>
+          <aside>
+            <p class="eyebrow">CURRENT CANDIDATE VERDICT</p>
+            <strong class="large-status">REJECT</strong>
+            <p>
+              The saved DistilGPT-2 LoRA evaluation improved category coverage and
+              latency, but regressed structured output by 60 points and error
+              detection by 40 points. The gate correctly prevents promotion.
+            </p>
+          </aside>
+        </div>
+
+        <div class="stats">
+          <article><span>Policy checks</span><strong>8</strong><small>Deterministic and traceable</small></article>
+          <article><span>Critical controls</span><strong>7</strong><small>Injection to human approval</small></article>
+          <article><span>Saved evaluation</span><strong>5</strong><small>Small test cases; no inflated claim</small></article>
+          <article><span>Raw prompts stored</span><strong>0</strong><small>Privacy-minimized audit</small></article>
+        </div>
+
+        <div class="grid-two">
+          <article class="card">
+            <p class="eyebrow">ASSURANCE PIPELINE</p>
+            <h2>Controls across the AI lifecycle</h2>
+            <ol class="pipeline">
+              <li><span>01</span><div><strong>Frame</strong><small>Use case, authorized evidence, acceptance criteria</small></div></li>
+              <li><span>02</span><div><strong>Generate</strong><small>Versioned, delimited prompt contract</small></div></li>
+              <li><span>03</span><div><strong>Interrogate</strong><small>Grounding, PII, secrets, injection, unsafe code</small></div></li>
+              <li><span>04</span><div><strong>Decide</strong><small>Approve, review, or block with remediation</small></div></li>
+              <li><span>05</span><div><strong>Operate</strong><small>Metrics, SQL audit, CI, container, support</small></div></li>
+            </ol>
+          </article>
+          <article class="card">
+            <p class="eyebrow">WHY THIS PROJECT MATTERS</p>
+            <h2>Business outcomes, not model theatre</h2>
+            <ul class="principles">
+              <li><strong>Correctness</strong><span>Unsupported metrics and missing acceptance terms are surfaced.</span></li>
+              <li><strong>Security</strong><span>Prompt injection, secrets, and unsafe generated code are blocked.</span></li>
+              <li><strong>Privacy</strong><span>Unauthorized PII is detected; raw prompts are excluded from audit storage.</span></li>
+              <li><strong>Performance</strong><span>Candidate releases must pass quality and latency non-regression gates.</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-assure">
+        <div class="workspace">
+          <article class="card">
+            <p class="eyebrow">POLICY-BASED VERIFICATION</p>
+            <h1>Output assurance</h1>
+            <p class="muted">Test a generated business answer or AI-assisted code before use.</p>
+            <form id="assure-form">
+              <label for="use-case">Business use case</label>
+              <input id="use-case" value="Client risk summary" required />
+              <label for="prompt">Original prompt</label>
+              <textarea id="prompt" rows="3" required>Summarize the approved loss ratio and recommend the next review step.</textarea>
+              <label for="context">Authorized evidence</label>
+              <textarea id="context" rows="3">The approved portfolio loss ratio is 12%. A human risk advisor must approve external recommendations.</textarea>
+              <label for="output">AI output to validate</label>
+              <textarea id="output" rows="4" required>The approved evidence reports a portfolio loss ratio of 12%. A human risk advisor should review the evidence before any external recommendation.</textarea>
+              <div class="field-row">
+                <div>
+                  <label for="required-terms">Required terms · comma separated</label>
+                  <input id="required-terms" value="12%, human risk advisor" />
+                </div>
+                <div>
+                  <label for="forbidden-terms">Forbidden terms · comma separated</label>
+                  <input id="forbidden-terms" value="guaranteed, zero risk" />
+                </div>
+              </div>
+              <label for="generated-code">Generated code · optional</label>
+              <textarea id="generated-code" rows="3" placeholder="Paste AI-generated code to scan for unsafe patterns"></textarea>
+              <label class="checkbox"><input id="external-action" type="checkbox" /> Output triggers an external or irreversible action</label>
+              <button type="submit" class="primary submit">Run assurance checks</button>
+            </form>
+          </article>
+          <article class="card result" id="assure-result">
+            <div class="empty"><strong>Decision pending</strong><span>Validation findings and remediation will appear here.</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-critique">
+        <div class="workspace">
+          <article class="card">
+            <p class="eyebrow">VERSIONED PROMPT · STRICT RESPONSE CONTRACT</p>
+            <h1>Structured LLM critique</h1>
+            <p class="muted">
+              Uses an OpenAI-compatible LLM when configured and a transparent
+              deterministic fallback otherwise. Every category is validated.
+            </p>
+            <form id="critique-form">
+              <label for="critique-question">Original question</label>
+              <textarea id="critique-question" rows="3" required>Should we send this risk recommendation to the client?</textarea>
+              <label for="critique-evidence">Authorized evidence</label>
+              <textarea id="critique-evidence" rows="4">The approved loss ratio is 12%. A human risk advisor must approve every external recommendation.</textarea>
+              <label for="critique-answer">Answer to critique</label>
+              <textarea id="critique-answer" rows="5" required>The loss ratio is 12%. This guarantees zero client risk and can be sent immediately.</textarea>
+              <button type="submit" class="primary submit">Generate eight-category critique</button>
+            </form>
+          </article>
+          <article class="card result" id="critique-result">
+            <div class="empty"><strong>Critique pending</strong><span>Validated category results, provider, model, prompt version, and latency will appear here.</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-promotion">
+        <div class="workspace">
+          <article class="card">
+            <p class="eyebrow">EVIDENCE-BASED RELEASE CONTROL</p>
+            <h1>Model promotion gate</h1>
+            <p class="muted">Loaded with the project’s actual saved evaluation—not the stale historical claims.</p>
+            <form id="promotion-form">
+              <div class="model-block">
+                <h3>Baseline · DistilGPT-2</h3>
+                <div class="field-row four">
+                  <label>Coverage<input id="base-coverage" type="number" step=".1" value="0" /></label>
+                  <label>Structure %<input id="base-structure" type="number" step=".1" value="100" /></label>
+                  <label>Detection %<input id="base-detection" type="number" step=".1" value="100" /></label>
+                  <label>Latency s<input id="base-latency" type="number" step=".001" value="4.131" /></label>
+                </div>
+              </div>
+              <div class="model-block">
+                <h3>Candidate · LoRA adapter</h3>
+                <div class="field-row four">
+                  <label>Coverage<input id="candidate-coverage" type="number" step=".1" value="1" /></label>
+                  <label>Structure %<input id="candidate-structure" type="number" step=".1" value="40" /></label>
+                  <label>Detection %<input id="candidate-detection" type="number" step=".1" value="60" /></label>
+                  <label>Latency s<input id="candidate-latency" type="number" step=".001" value="3.968" /></label>
+                </div>
+              </div>
+              <button type="submit" class="primary submit">Evaluate release candidate</button>
+            </form>
+          </article>
+          <article class="card result" id="promotion-result">
+            <div class="empty"><strong>Promotion pending</strong><span>The release decision and metric deltas will appear here.</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-audit">
+        <article class="card">
+          <div class="audit-heading">
+            <div><p class="eyebrow">SQL-BACKED TRACEABILITY</p><h1>Assurance audit trail</h1></div>
+            <div class="actions"><a href="/docs" class="secondary button-link" target="_blank">API docs</a><a href="/metrics" class="secondary button-link" target="_blank">Metrics</a><button id="refresh-audit" class="primary">Refresh</button></div>
+          </div>
+          <p class="muted">Stores decisions and operational metadata, never raw prompts, outputs, code, PII, or secrets.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Request</th><th>Type</th><th>Use case</th><th>Decision</th><th>Score</th><th>Findings</th><th>Latency</th><th>Time</th></tr></thead>
+              <tbody id="audit-body"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div id="toast" role="status"></div>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
