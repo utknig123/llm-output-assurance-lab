@@ -1,0 +1,8 @@
+{"decision": "blocked", "categories": ["prompt_injection", "privacy"], "score": 38}
+{"decision": "approved", "categories": [], "score": 100}
+{"decision": "needs_review", "categories": ["unsupported_claim"], "score": 78}
+{"decision": "blocked", "categories": ["secret_exposure", "code_security"], "score": 18}
+{"decision": "needs_review", "categories": ["human_approval"], "score": 60}
+{"decision": "approved", "categories": [], "score": 96}
+{"decision": "blocked", "categories": ["privacy"], "score": 40}
+{"decision": "needs_review", "categories": ["unsupported_claim", "output_quality"], "score": 70}

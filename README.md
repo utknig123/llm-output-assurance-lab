@@ -20,6 +20,8 @@ controls needed to evaluate and safely operate probabilistic AI systems.
 - Evidence-based model promotion with quality and latency non-regression gates.
 - SQLite audit records that exclude raw prompts, outputs, code, PII, and secrets.
 - Prometheus request, latency, finding, provider, and decision metrics.
+- Hadoop Streaming mapper and reducer (`jobs/hadoop`) that tally decisions and finding categories. `run_local.py` is the same contract without a cluster.
+- An R script (`jobs/r/score_summary.R`) that reads that tally and reports the blocked rate with a 95% Wilson interval.
 - FastAPI/OpenAPI service, responsive browser UI, Docker health check, pytest,
   GitHub Actions CI, compilation check, and dependency audit.
 
